@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Api from "./utils/api";
+import Api from "./utils/api.jsx";
+import FlightSeeder from "./utils/Seeder.jsx";
 
 function Header({ goToForm }) {
     return (
@@ -162,6 +163,7 @@ function FlightResults({ searchQuery, goToForm }) {
     return (
         <div className="min-h-screen bg-gray-900 text-gray-100 font-sans p-6">
             <Header goToForm={goToForm} />
+            <FlightSeeder />
             {isLoading ? (
                 <h1 className="text-2xl font-medium text-gray-400 mt-10">
                     Loading flights...
